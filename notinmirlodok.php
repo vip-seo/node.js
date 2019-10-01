@@ -1,6 +1,6 @@
 ﻿<?php
 
-
+//bla bla bla
 mysql_select_db ("vipmir_db");
 mysql_query("SET NAMES utf8");
 ini_set('max_execution_time', 900);
