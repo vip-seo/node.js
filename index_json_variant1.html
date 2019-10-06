@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+     <meta charset="utf-8" />
+     <style type="text/css">
+          h1 {
+               font-size: 14px;
+               text-align: center;
+          }
+
+          .block {
+               font-size: 12px;
+               width: 70px;
+               display: inline-block;
+          }
+     </style>
+     <title>Node.js</title>
+</head>
+
+<body>
+     <h1> Курсы валют Приватбанк</h1>
+     <hr>
+     <div class="block" id="name">
+          <h2>Валюта</h2>
+     </div>
+     <div class="block" id="buy">
+          <h2>Покупка</h2>
+     </div>
+     <div class="block" id="sale">
+          <h2>Продажа</h2>
+     </div>
+     <script type="text/javascript">
+          var xmlhttp = new XMLHttpRequest();
+          var url =
+               'https://api.privatbank.ua/p24api/pubinfo?json&exchange&coursid=3&fbclid=IwAR189Exxxx_ZwKcaPCZl7EnJ1v-yc0A3ApLGt56lxrq-w0oPCFykvk2el00';
+          xmlhttp.open('GET', url, false);
+          xmlhttp.send();
+          var data = JSON.parse(xmlhttp.responseText);
+          for (var key in data) {
+               let p = document.createElement('p');
+               p.innerHTML = data[key]['ccy'];
+               document.getElementById('name').appendChild(p);
+          }
+          for (var key in data) {
+               let p = document.createElement('p');
+               p.innerHTML = data[key]['buy'];
+               document.getElementById('buy').appendChild(p);
+          }
+          for (var key in data) {
+               let p = document.createElement('p');
+               p.innerHTML = data[key]['sale'];
+               document.getElementById('sale').appendChild(p);
+          }
+     </script>
+</body>
+
+</html>
