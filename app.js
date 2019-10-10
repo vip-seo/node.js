@@ -62,3 +62,4 @@ emitter.emit('Login', 'Hannibal Lecter', '12:00', true);
 
 emitter.emit('Logout', 'Hannibal Lecter', '21:00');
 //Решение задачи запуска скрипта в фоне и мониторинга состояния сервера: forever start -c nodemon app.js
+
