@@ -32,5 +32,5 @@ app.listen(port, function () {
 //--------------------------
 //CREATE - POST
 //READ - GET
-//UPDATE - UPDATE
+//UPDATE - PUT
 //DELETE - DELETE
