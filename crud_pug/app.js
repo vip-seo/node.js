@@ -29,7 +29,7 @@ app.post('/corses/add', function (req, res) {
     id: Date.now(),
     name: req.body.name
   };
-console.log(course);
+ 
   courses.push(course);
 
   res.redirect('/courses');

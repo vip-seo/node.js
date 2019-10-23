@@ -3,7 +3,7 @@ extends layout
 block content
     h1 Все курсы Академии
 
-    form(method='POST')
+    form(method="post" action='/corses/add')
         fielset.form-group
             label(for="name") Name:
             input.form-control(name="name", id="name", type="text", placeholder="Введите имя курса")
